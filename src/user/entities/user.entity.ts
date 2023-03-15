@@ -14,6 +14,9 @@ export class User extends AbstractEntity {
   @Column({ default: false })
   public isEmailConfirmed: boolean;
 
+  @Column({ nullable: false })
+  public email: string;
+
   @BeforeInsert()
   @BeforeUpdate()
   async hashPassword() {
