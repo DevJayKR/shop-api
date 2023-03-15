@@ -7,6 +7,8 @@ import { DatabaseModule } from './database/database.module';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { EmailModule } from './email/email.module';
+import { UploadModule } from './upload/upload.module';
+import { HttpModule } from '@nestjs/axios';
 
 @Module({
   imports: [
@@ -39,6 +41,8 @@ import { EmailModule } from './email/email.module';
     UserModule,
     AuthModule,
     EmailModule,
+    UploadModule,
+    HttpModule,
   ],
   controllers: [AppController],
   providers: [AppService],
