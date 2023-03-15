@@ -30,7 +30,6 @@ export class AuthService {
   async generateAccessToken(id: string) {
     const payload: TokenPayload = { id };
     const token = this.jwtService.sign(payload);
-    Logger.log(token);
 
     return token;
   }
